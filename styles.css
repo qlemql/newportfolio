@@ -188,7 +188,7 @@ p {
 }
 
 .about {
-  background: linear-gradient(to top, #e29587, #d66d75);
+  background: linear-gradient(to bottom, #ffc7cd, #bfe9ff);
   padding: 25px;
 }
 
@@ -199,7 +199,6 @@ p {
 
 .title h2 {
   position: relative;
-  color: #fff;
   font-size: 1.8em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -216,13 +215,13 @@ p {
   left: 50%;
   transform: translateX(-50%);
   bottom: -10px;
-  width: 60px;
+  width: 150px;
   height: 4px;
-  background: #000;
+  background: rgb(255, 167, 167);
 }
 
-.title.white h2,
-.title.white p {
+.title h2,
+.title p {
   color: #333;
 }
 
