@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .toggle {
@@ -28,18 +29,7 @@
 }
 
 section {
-  background: #e8cbc0; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #daeaf5,
-    #dbcfca
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #daeaf5,
-    #ffeae2
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: linear-gradient(to right, #daeaf5, #ffcfbc);
   padding: 100px;
   min-height: 100vh;
 }
@@ -148,7 +138,7 @@ p {
 
 .sci li img {
   transform: scale(0.5);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .sci li img:hover {
@@ -157,11 +147,11 @@ p {
 
 .sidebar {
   position: fixed;
-  background: #424242;
+  background: linear-gradient(to top, #a7bfe8, #6190e8);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 1s;
+  transition: 1.5s;
   padding: 40px;
   z-index: 100;
   right: -100%;
@@ -195,4 +185,92 @@ p {
 
 .sidebar ul li a:hover {
   color: #000;
+}
+
+.about {
+  background: linear-gradient(to top, #e29587, #d66d75);
+  padding: 25px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.title h2 {
+  position: relative;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.title h2 p {
+  max-width: 700px;
+  display: inline-block;
+}
+
+.title h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background: #000;
+}
+
+.title.white h2,
+.title.white p {
+  color: #333;
+}
+
+.title.anime,
+.textBx.anime,
+.imgBx.anime {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.anime-up {
+  transform: translate(0, 100px);
+}
+
+.anime-right {
+  transform: translate(-100px, 0);
+}
+
+.anime-left {
+  transform: translate(100px, 0);
+}
+
+.anime.show {
+  opacity: 1;
+  transform: none;
+}
+
+.about .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding: 0px 50px;
+}
+
+.about .content .textBx {
+  min-width: 49%;
+  width: 49%;
+}
+
+.about .content .textBx p {
+  color: #333;
+}
+
+.about .content .imgBx {
+  margin-left: 40px;
+}
+
+.about .content .imgBx img {
+  max-width: 100%;
 }
