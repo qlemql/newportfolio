@@ -7,6 +7,8 @@
   scroll-behavior: smooth;
 }
 
+/* TOGGLE */
+
 .toggle {
   position: fixed;
   top: 30px;
@@ -27,6 +29,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* HOME */
 
 section {
   background: linear-gradient(to right, #daeaf5, #ffcfbc);
@@ -145,6 +149,8 @@ p {
   opacity: 1;
 }
 
+/* SIDE BAR */
+
 .sidebar {
   position: fixed;
   background: linear-gradient(to top, #a7bfe8, #6190e8);
@@ -186,6 +192,8 @@ p {
 .sidebar ul li a:hover {
   color: #000;
 }
+
+/* ABOUT */
 
 .about {
   background: linear-gradient(to bottom, #ffc7cd, #bfe9ff);
@@ -272,4 +280,60 @@ p {
 
 .about .content .imgBx img {
   max-width: 100%;
+}
+
+/* WORK */
+
+.work .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.work .content .workBx {
+  position: relative;
+  width: 500px;
+  height: 265px;
+  margin: 10px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.work .content .workBx .imgBx,
+.work .content .workBx .textBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work .content .workBx .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.work .content .workBx .textBx {
+  background: #94b2e8;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.work .content .workBx:hover .textBx {
+  opacity: 1;
+}
+
+.work .content .workBx .textBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
 }
